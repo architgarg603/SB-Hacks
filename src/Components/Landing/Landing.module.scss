@@ -1,0 +1,39 @@
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5FBFF;
+
+    .h1{
+        width: 100%;
+        height: 100vh;
+        background-image: url('../../Assets//landing1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        
+    }
+    
+    .h2{
+        width: 100%;
+        height: 400px;
+        background-image: url('../../Assets//landing2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        margin-bottom: 50px;
+
+    }
+    .h3{
+        width: 100%;
+        height: 600px;
+        background-image: url('../../Assets/landing3.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+
+    }
+    .h4{
+        width: 100%;
+    }
+
+}
