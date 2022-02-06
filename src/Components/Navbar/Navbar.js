@@ -34,7 +34,7 @@ const Navbar = () => {
     const handleCloseNavMenu = (link) => {
         setAnchorElNav(null);
         console.log(link);
-        if (link == "Home") history("/")
+        if (link == "Home") history("/home")
         if (link == "Wallet") history("/wallet")
         if (link == "Habbit Tracker") history("/habbit")
         if (link == "Food Tracker") history("/food")
@@ -60,7 +60,7 @@ const Navbar = () => {
                         component="div"
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, color: "black" }}
                     >
-                        <Link to="/home">
+                        <Link to="/">
                             <img src={logo} style={{ height: "25px", marginTop: "8px", width: "100px" }} />
                         </Link>
                     </Typography>
@@ -94,7 +94,7 @@ const Navbar = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {(path == "/home" || path == "/login" || path == "/signup") ?
+                            {(path == "/" || path == "/login" || path == "/signup") ?
                                 pages.map((page) => (
                                     <MenuItem key={page} onClick={() => handleCloseNavMenu(page)} sx={{ color: "#51B1F7", display: "flex", alignItems: "center", height: "70px" }}>
                                         <Typography textAlign="center">{page}</Typography>
@@ -109,12 +109,12 @@ const Navbar = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        <Link to="/home">
+                        <Link to="/">
                             <img src={logo} style={{ height: "25px", marginTop: "8px", width: "100px" }} />
                         </Link>
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                         {(path == "/home" || path == "/login" || path == "/signup") ?
+                         {(path == "/" || path == "/login" || path == "/signup") ?
                         pages.map((page) => (
                             <Button
                                 key={page}

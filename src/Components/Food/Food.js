@@ -43,7 +43,7 @@ function Food() {
 
         <div className={style.left}>
             <ul>
-                <Link to="/">
+                <Link to="/home">
                     <li>Home</li>
                 </Link>
                 <Link to="/wallet">

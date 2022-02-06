@@ -19,13 +19,13 @@ function App() {
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/home' element={<Landing />} />
           <Route path='/todo' element={<ToDo />} />
           <Route path='/food' element={<Food />} />
           <Route path='/wallet' element={<Wallet />} />
           <Route path='/habbit' element={<Habbit />} />
           <Route path='/notes' element={<Notes />} />
-          <Route path='/' element={<Homepage />} />
+          <Route path='/home' element={<Homepage />} />
+          <Route path='/' element={<Landing />} />
         </Routes>
       </BrowserRouter>
     </>
