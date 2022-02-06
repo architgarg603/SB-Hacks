@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import logo from '../../Assets/logo.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-const pages = ['Home', 'Wallet', 'Habbit Tracker', 'Food Tracker', 'NotesHub'];
+const pages = [];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navbar = () => {

@@ -77,16 +77,10 @@
                     height: 100%;
                     width: 32%;
                     box-shadow: 0px 20px 27px 0px #00000020;
-                    border-radius: 15px;
-                }
-
-                & > a > div {
-                    height: 100%;
-                    width: 100%;
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: contain;
-
+                    border-radius: 15px;
                     &:first-child {
                         background-image: url("../../Assets/Card.png");
                     }
@@ -96,6 +90,11 @@
                     &:nth-child(3) {
                         background-image: url("../../Assets/Card\ \(2\).png");
                     }
+                }
+
+                & > a > div {
+                    height: 100%;
+                    width: 100%;
                 }
             }
         }

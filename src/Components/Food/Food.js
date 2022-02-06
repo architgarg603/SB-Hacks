@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import style from './Food.module.scss';
 
 function Food() {
@@ -9,6 +9,20 @@ function Food() {
     const [Date, setDate] = useState("")
     const [cat, setcat] = useState("Fridge")
     const [popup, setPopup] = useState(false);
+    const location = useLocation();
+    const path = location.pathname;
+
+    const nav = (link, name) => {
+        return (
+            <Link to={link}>
+                <li style={{
+                    background: path == link ? "black" : "white",
+                    color: path == link ? "white" : "black",
+                    borderRadius: "15px"
+                }} >{name}</li>
+            </Link>
+        )
+    }
 
 
     return <div className={style.wrapper}>
@@ -43,21 +57,11 @@ function Food() {
 
         <div className={style.left}>
             <ul>
-                <Link to="/home">
-                    <li>Home</li>
-                </Link>
-                <Link to="/wallet">
-                    <li>My Wallet</li>
-                </Link>
-                <Link to="/habbit">
-                    <li>Habbit Tracker</li>
-                </Link>
-                <Link to="/food">
-                    <li>Food Tracker</li>
-                </Link>
-                <Link to="/notes">
-                    <li>NotesHub</li>
-                </Link>
+                {nav("/wallet", "My Wallet")}
+                {nav("/habbit", "Habit Tracker")}
+                {nav("/food", "Food Tracker")}
+                {nav("/notes", "NotesHub")}
+                {nav("/todo", "Todo")}
             </ul>
         </div>
         <div className={style.right}>
