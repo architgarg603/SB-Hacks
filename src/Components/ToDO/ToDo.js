@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import style from './ToDo.module.scss';
 
 function ToDo() {
@@ -32,13 +33,22 @@ function ToDo() {
 
 
         <div className={style.left}>
-            <ul>
-                <li>Home</li>
-                <li>My Wallet</li>
-                <li>Habbit Tracker</li>
-                <li>Food Tracker</li>
-                <li>NotesHub</li>
-                <li>Sign Out</li>
+        <ul>
+                <Link to="/">
+                    <li>Home</li>
+                </Link>
+                <Link to="/wallet">
+                    <li>My Wallet</li>
+                </Link>
+                <Link to="/habbit">
+                    <li>Habbit Tracker</li>
+                </Link>
+                <Link to="/food">
+                    <li>Food Tracker</li>
+                </Link>
+                <Link to="/notes">
+                    <li>NotesHub</li>
+                </Link>
             </ul>
         </div>
         <div className={style.right}>

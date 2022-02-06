@@ -1,15 +1,26 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import style from './Homepage.module.scss'
 function Homepage() {
+    const history = useNavigate();
     return <div className={style.wrapper}>
         <div className={style.left}>
             <ul>
-                <li>Home</li>
-                <li>My Wallet</li>
-                <li>Habbit Tracker</li>
-                <li>Food Tracker</li>
-                <li>NotesHub</li>
-                <li>Sign Out</li>
+                <Link to="/">
+                    <li>Home</li>
+                </Link>
+                <Link to="/wallet">
+                    <li>My Wallet</li>
+                </Link>
+                <Link to="/habbit">
+                    <li>Habbit Tracker</li>
+                </Link>
+                <Link to="/food">
+                    <li>Food Tracker</li>
+                </Link>
+                <Link to="/notes">
+                    <li>NotesHub</li>
+                </Link>
             </ul>
         </div>
         <div className={style.right}>
@@ -18,44 +29,57 @@ function Homepage() {
             </div>
             <div className={style.h2}>
                 <div className={style.l1}>
-                    <div className={style.u1}>
-                        <div>
-                            <div>Go to Page</div>
+                    <Link to="/wallet">
+                        <div className={style.u1}>
+                            <div>
+                                <div>Go to Page</div>
+                            </div>
                         </div>
-                    </div>
-                    <div className={style.u2}>
-                        <div>
-                            <div>Go to Page</div>
+                    </Link>
+                    <Link to="/food">
+
+                        <div className={style.u2}>
+                            <div>
+                                <div>Go to Page</div>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className={style.l2}>
-                    <div className={style.u1}>
-                        <div></div>
-                    </div>
-                    <div className={style.u2}>
-                        <div></div>
-                    </div>
+                    <Link to="/wallet">
+
+                        <div className={style.u1}>
+                            <div></div>
+                        </div>
+                    </Link>
+                    <Link to="/food">
+
+                        <div className={style.u2}>
+                            <div></div>
+                        </div>
+                    </Link>
                 </div>
 
             </div>
             <div className={style.h3}>
-                <div className={style.l1}>
-
-                </div>
-                <div className={style.l2}>
-                    <div>
-                       
+                    <div className={style.l1} onClick={()=>history("/habbit")}>
                     </div>
-                </div>
+
+                    <div className={style.l2}>
+               
+                        <div  onClick={()=>history("/habbit")}>
+
+                        </div>
+               
+                    </div>
             </div>
             <div className={style.h4}>
-                <div className={style.l1}>
+                <div className={style.l1} onClick={()=>history("/notes")}>
                     <div>
-                    <div>NOTESHUB</div>
+                        <div>NOTESHUB</div>
                     </div>
                 </div>
-                <div className={style.l2}>
+                <div className={style.l2}  onClick={()=>history("/notes")}>
                     <div>
                         <div>Go to Page</div>
                     </div>

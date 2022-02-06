@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import style from './Food.module.scss';
 
 function Food() {
@@ -42,12 +43,21 @@ function Food() {
 
         <div className={style.left}>
             <ul>
-                <li>Home</li>
-                <li>My Wallet</li>
-                <li>Habbit Tracker</li>
-                <li>Food Tracker</li>
-                <li>NotesHub</li>
-                <li>Sign Out</li>
+                <Link to="/">
+                    <li>Home</li>
+                </Link>
+                <Link to="/wallet">
+                    <li>My Wallet</li>
+                </Link>
+                <Link to="/habbit">
+                    <li>Habbit Tracker</li>
+                </Link>
+                <Link to="/food">
+                    <li>Food Tracker</li>
+                </Link>
+                <Link to="/notes">
+                    <li>NotesHub</li>
+                </Link>
             </ul>
         </div>
         <div className={style.right}>
@@ -68,7 +78,7 @@ function Food() {
                     <div className={style.para}>Expiring on 15/02/2022</div>
                 </div>
                 {task.map((data) => {
-                    if(data[2] != 'Fridge')return "";
+                    if (data[2] != 'Fridge') return "";
                     return (
                         <div className={style.t1}>
                             <div className={style.subHeadd}>{data[0]}</div>
@@ -87,7 +97,7 @@ function Food() {
                     <div className={style.para}>Expiring on 8/02/2022</div>
                 </div>
                 {task.map((data) => {
-                    if(data[2] != 'Pantry')return "";
+                    if (data[2] != 'Pantry') return "";
                     return (
                         <div className={style.t1}>
                             <div className={style.subHeadd}>{data[0]}</div>
@@ -97,7 +107,7 @@ function Food() {
                 })}
             </div>
             <div className={style.drawer}>
-                <div className={style.btn} onClick={()=>setPopup(true)} >Add</div>
+                <div className={style.btn} onClick={() => setPopup(true)} >Add</div>
                 <div className={style.head} >Snack Drawer</div>
                 <div className={style.subHead} >Expired</div>
                 <div style={{ minHeight: "70px", margin: "10px 0" }}></div>
@@ -111,7 +121,7 @@ function Food() {
                     <div className={style.para}>Expiring on 22/10/2022</div>
                 </div>
                 {task.map((data) => {
-                    if(data[2] != 'Drawer')return "";
+                    if (data[2] != 'Drawer') return "";
                     return (
                         <div className={style.t1}>
                             <div className={style.subHeadd}>{data[0]}</div>
